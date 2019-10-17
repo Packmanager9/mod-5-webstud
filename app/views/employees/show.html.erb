@@ -1,0 +1,7 @@
+<img src=<%= @employee.img_url %> alt="Employee Picture">
+<h1><%= @employee.to_s %></h1>
+<h3>Aka: <%= @employee.alias %></h3>
+<h3>Position: <%= @employee.title %></h3>
+<h3>Office: <%= @employee.office %></h3>
+<h3>Dog: <%= link_to @employee.dog_name, dog_path(@employee.dog)%></h3>
+<%= button_to "Edit", edit_employee_path(@employee.id), method: :get %>

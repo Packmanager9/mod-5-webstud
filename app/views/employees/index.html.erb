@@ -1,0 +1,8 @@
+<h1>Employees</h1>
+<ul>
+  <% @employees.each do |employee| %>
+    <li><%= link_to employee.to_s, employee_path(employee) %></li>
+  <% end %>
+</ul>
+<%= button_to "New", new_employee_path(Employee.new), method: :get %>
+
